@@ -1,0 +1,123 @@
+@import 'tailwindcss';
+
+:root {
+  --bg: #0D0D0F;
+  --card-bg: #1A1A1F;
+  --card-border: #2E2E38;
+  --header-bg: #121217;
+  --neon-purple: #AD4DFF;
+  --neon-magenta: #ED45AD;
+  --neon-cyan: #4DD9F2;
+  --status-green: #4DD973;
+  --status-amber: #F2BF33;
+  --status-gray: #80808C;
+  --text-primary: #EBEBF2;
+  --text-secondary: #8C8C9E;
+  --text-muted: #616173;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: system-ui, -apple-system, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--card-border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--neon-purple); }
+
+/* Neon glow utilities */
+.neon-glow-purple {
+  box-shadow: 0 0 12px rgba(173, 77, 255, 0.25), 0 0 4px rgba(173, 77, 255, 0.1);
+}
+.neon-glow-cyan {
+  box-shadow: 0 0 12px rgba(77, 217, 242, 0.25), 0 0 4px rgba(77, 217, 242, 0.1);
+}
+.neon-glow-magenta {
+  box-shadow: 0 0 12px rgba(237, 69, 173, 0.25), 0 0 4px rgba(237, 69, 173, 0.1);
+}
+.neon-glow-green {
+  box-shadow: 0 0 12px rgba(77, 217, 115, 0.25), 0 0 4px rgba(77, 217, 115, 0.1);
+}
+
+/* Card base */
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
+  transition: all 0.15s ease;
+}
+.card:hover {
+  border-color: rgba(173, 77, 255, 0.4);
+  box-shadow: 0 0 16px rgba(173, 77, 255, 0.15);
+}
+
+/* Status dot */
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Button base */
+.btn {
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  border: none;
+}
+.btn-primary {
+  background: var(--neon-purple);
+  color: white;
+}
+.btn-primary:hover {
+  background: #9B3AEE;
+  box-shadow: 0 0 12px rgba(173, 77, 255, 0.4);
+}
+.btn-ghost {
+  background: transparent;
+  color: var(--text-secondary);
+  border: 1px solid var(--card-border);
+}
+.btn-ghost:hover {
+  border-color: var(--neon-purple);
+  color: var(--neon-purple);
+}
+
+/* Tab styles */
+.tab {
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.15s ease;
+}
+.tab:hover { color: var(--text-secondary); }
+.tab.active {
+  color: var(--neon-purple);
+  border-bottom-color: var(--neon-purple);
+}
+
+/* Chip/tag */
+.chip {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  background: rgba(173, 77, 255, 0.15);
+  color: var(--neon-purple);
+}
+
+/* Monospace for paths */
+.mono { font-family: 'SF Mono', 'Fira Code', monospace; }
