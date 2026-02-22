@@ -28,7 +28,6 @@
 declare module '$env/static/private' {
 	export const NODE: string;
 	export const OPENCLAW_GATEWAY_PORT: string;
-	export const INIT_CWD: string;
 	export const NODE_NO_WARNINGS: string;
 	export const SHELL: string;
 	export const TMPDIR: string;
@@ -40,7 +39,6 @@ declare module '$env/static/private' {
 	export const SSH_AUTH_SOCK: string;
 	export const __CF_USER_TEXT_ENCODING: string;
 	export const npm_execpath: string;
-	export const BUN_WHICH_IGNORE_CWD: string;
 	export const OPENCLAW_SERVICE_MARKER: string;
 	export const OPENCLAW_SYSTEMD_UNIT: string;
 	export const OPENCLAW_LAUNCHD_LABEL: string;
@@ -48,8 +46,9 @@ declare module '$env/static/private' {
 	export const npm_package_json: string;
 	export const _: string;
 	export const BRAVE_API_KEY: string;
-	export const JOBS: string;
+	export const npm_command: string;
 	export const PWD: string;
+	export const npm_lifecycle_event: string;
 	export const npm_package_name: string;
 	export const XPC_FLAGS: string;
 	export const OPENCLAW_SERVICE_VERSION: string;
@@ -59,9 +58,11 @@ declare module '$env/static/private' {
 	export const HOME: string;
 	export const OPENCLAW_GATEWAY_TOKEN: string;
 	export const LOGNAME: string;
+	export const npm_lifecycle_script: string;
 	export const npm_config_user_agent: string;
 	export const OPENCLAW_PATH_BOOTSTRAPPED: string;
 	export const npm_node_execpath: string;
+	export const NODE_ENV: string;
 }
 
 /**
@@ -93,7 +94,6 @@ declare module '$env/dynamic/private' {
 	export const env: {
 		NODE: string;
 		OPENCLAW_GATEWAY_PORT: string;
-		INIT_CWD: string;
 		NODE_NO_WARNINGS: string;
 		SHELL: string;
 		TMPDIR: string;
@@ -105,7 +105,6 @@ declare module '$env/dynamic/private' {
 		SSH_AUTH_SOCK: string;
 		__CF_USER_TEXT_ENCODING: string;
 		npm_execpath: string;
-		BUN_WHICH_IGNORE_CWD: string;
 		OPENCLAW_SERVICE_MARKER: string;
 		OPENCLAW_SYSTEMD_UNIT: string;
 		OPENCLAW_LAUNCHD_LABEL: string;
@@ -113,8 +112,9 @@ declare module '$env/dynamic/private' {
 		npm_package_json: string;
 		_: string;
 		BRAVE_API_KEY: string;
-		JOBS: string;
+		npm_command: string;
 		PWD: string;
+		npm_lifecycle_event: string;
 		npm_package_name: string;
 		XPC_FLAGS: string;
 		OPENCLAW_SERVICE_VERSION: string;
@@ -124,9 +124,11 @@ declare module '$env/dynamic/private' {
 		HOME: string;
 		OPENCLAW_GATEWAY_TOKEN: string;
 		LOGNAME: string;
+		npm_lifecycle_script: string;
 		npm_config_user_agent: string;
 		OPENCLAW_PATH_BOOTSTRAPPED: string;
 		npm_node_execpath: string;
+		NODE_ENV: string;
 		[key: `PUBLIC_${string}`]: undefined;
 		[key: `${string}`]: string | undefined;
 	}

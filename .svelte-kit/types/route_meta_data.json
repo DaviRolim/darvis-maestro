@@ -1,0 +1,26 @@
+{
+	"/": [],
+	"/api/goals": [
+		"src/routes/api/goals/+server.ts"
+	],
+	"/api/goals/[id]": [
+		"src/routes/api/goals/[id]/+server.ts"
+	],
+	"/api/goals/[id]/artifacts": [
+		"src/routes/api/goals/[id]/artifacts/+server.ts"
+	],
+	"/api/goals/[id]/metrics": [
+		"src/routes/api/goals/[id]/metrics/+server.ts"
+	],
+	"/api/goals/[id]/outcomes": [
+		"src/routes/api/goals/[id]/outcomes/+server.ts"
+	],
+	"/api/goals/[id]/updates": [
+		"src/routes/api/goals/[id]/updates/+server.ts"
+	],
+	"/api/report": [
+		"src/routes/api/report/+server.ts"
+	],
+	"/goals/[id]": [],
+	"/portfolio": []
+}
